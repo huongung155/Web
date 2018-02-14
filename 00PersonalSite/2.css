@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2017, 5:46:52 PM
+    Author     : huong
+*/
+.books{
+	float: left;
+	margin: 2.5%;
+}
+hr{
+	border-style: none;
+	border-bottom: 2px dashed gray;
+}
+
+div img{
+	height: 250px;
+	width: 175px;
+}
+
+body{
+	max-width: 400px;
+	width: 80%;
+	background: linear-gradient(to right, #70e1f5, #ffd194);
+}
+
+h1{
+	text-align: center;
+	font-weight: normal;
+}

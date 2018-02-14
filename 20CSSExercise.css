@@ -1,0 +1,22 @@
+body{
+	border: 20px solid #BDC3C7;
+	width: 60%;
+	margin: 0 auto;
+}
+p{
+	margin: 1.66%;
+}
+h1{
+	margin-left: 1.66%;
+}
+h3{
+	margin-left: 1.66%;
+	color: blue;	
+}
+h1 + p{
+	border-left: 3px solid #BDC3C7;
+}
+.bottomFaint{
+	border-bottom: 1px solid #F1F1F1;
+	height: 10%;
+}

@@ -1,0 +1,38 @@
+var name = "rusty"
+undefined
+
+name
+"rusty"
+
+name = "Tater";
+"Tater"
+
+name
+"Tater"
+
+name_1 = "Tip";
+"Tip"
+
+name_1;
+"Tip"
+
+friend = "Sally"
+"Sally"
+
+"Hello THere
+VM1389:1 Uncaught SyntaxError: Invalid or unexpected token
+
+"Hello There " + friend;
+"Hello There Sally"
+
+num = 43;
+43
+
+num
+43
+
+num + 100
+143
+
+num + 100%2
+43

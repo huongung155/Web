@@ -1,0 +1,72 @@
+huongung155:~/workspace $ mkdir 70IntroNode
+huongung155:~/workspace $ node
+> 
+(To exit, press ^C again or type .exit)
+
+
+huongung155:~/workspace $ cd 70IntroNode
+huongung155:~/workspace/70IntroNode $ touch hello.js
+/*Inside hello.js:
+for(var i = 0; i < 10; i++){
+    console.log(i);
+}*/
+huongung155:~/workspace/70IntroNode $ node hello.js
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+touch echo.js
+huongung155:~/workspace/70IntroNode $ node echo.js
+/*Inside echo.js:
+function echo(a, b){
+    for(var i = 0; i < b; i++){
+        console.log(a);
+    }
+}
+
+echo("Echo!!!", 10);
+echo("Tater Tots", 3);
+*/
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Echo!!!
+Tater Tots
+Tater Tots
+Tater Tots
+
+
+huongung155:~/workspace/70IntroNode $ touch grader.js
+/*Inside grader.js:
+function average(arr){
+    var sum = 0;
+    arr.forEach(function(element){
+        sum += element;
+    });
+    
+    return Math.round(sum/arr.length);
+}
+
+var score = [90, 98, 89, 100, 100, 86, 94]
+console.log(average(score))
+
+var scores2 = [40, 65, 77, 82, 80, 54, 73, 63, 95, 49]
+console.log(average(scores2))
+*/
+huongung155:~/workspace/70IntroNode $ node grader.js
+94
+68

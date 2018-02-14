@@ -1,0 +1,53 @@
+Before any project, need to npm init to fill package.json
+
+Inside home.ejs
+/*
+	<h1>HOME PAGE!!!</h1>
+*/
+
+Inside frineds.ejs
+/*
+	<h1>FRIENDS LIST HERE!!</h1>
+
+	<%friends.forEach(function(friend){%>
+    	<li><%= friend%></li>
+	<%});%>
+
+	<form action="/addFriend" method="POST">
+    	<input type="text" name="newfriend" placeholder="name">
+    	<button>Made a new friend</button>
+	</form>
+*/
+
+Inside app.js
+/*
+	var express = require("express");
+	var app = express();
+	var bodyParser = require("body-parser");
+
+	app.use(bodyParser.urlencoded({extended: true}));
+
+	var friends = ["Tony", "Miranda", "Justin", "Pierre", "Lilly"];
+
+	app.set("view engine", "ejs");
+
+	app.get("/", function(req, res){
+	    res.render("home");
+	});
+
+	app.post("/addFriend", function(req, res){
+	    var friend = req.body.newfriend;//need to install body-parser
+	    friends.push(friend);
+	    res.redirect("/friends");
+	})
+
+	app.get("/friends", function(req, res){
+	    
+	    res.render("friends", {friends: friends});
+	});
+
+	app.listen(process.env.PORT, process.env.IP, function(req, res){
+	    console.log("Server has started");
+	})
+*/
+Note: Install body-parser (by npm isntall body-parser --save). In addition, you need to use Database instead of var friends because when restarting server, the data you add is not recorded

@@ -1,0 +1,67 @@
+function sayHi(){
+    console.log("HELLO");
+    console.log("BYE");
+}
+sayHi()
+HELLO
+BYE
+
+
+sayHi//search sayHi()
+ƒ sayHi(){
+    console.log("HELLO");
+    console.log("BYE");
+}
+
+
+function sayHi(name){
+    console.log("Say Hi to " + name);
+}
+sayHi("Quan")
+
+
+function area(length, width){
+    console.log(length * width);
+}
+area(5)
+NaN
+
+
+function sayHi(name1, name2){
+    console.log("Say Hi to " + name1);
+    console.log("Say Hi to " + name2);
+}
+sayHi("QUan")
+Say Hi to QUan
+Say Hi to undefined
+
+
+Function Declaration vs Function Expression
+//Function Declaration
+function sayHi(){
+    console.log("HELLO");
+    console.log("BYE");
+}
+
+//Function Expression
+var sayHi = function(){
+    console.log("Hello!");
+}
+
+sayHi()
+Hello!
+
+sayHi
+ƒ (){
+    console.log("Hello!");
+}
+
+sayHi = 34
+34
+
+sayHi
+34
+
+sayHi()
+VM474:1 Uncaught TypeError: sayHi is not a function
+    at <anonymous>:1:1

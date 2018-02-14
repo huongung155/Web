@@ -1,0 +1,59 @@
+//-------PUSH & POP ----------------------
+var colors = ["red", "orange", "yellow"]
+undefined
+
+colors
+(3) ["red", "orange", "yellow"]
+
+colors[4] = "blue"
+"blue"
+
+colors
+(5) ["red", "orange", "yellow", undefined × 1, "blue"]
+
+colors.push("Indigo")
+6
+
+colors
+(6) ["red", "orange", "yellow", undefined × 1, "blue", "Indigo"]
+
+colors.pop()
+"Indigo"
+
+colors
+(5) ["red", "orange", "yellow", undefined × 1, "blue"]
+
+//---------------------SHIFT & UNSHIFT----------------
+var nums = [23, 45, 55];
+undefined
+
+nums.unshift("HELLO");
+4
+
+nums
+(4) ["HELLO", 23, 45, 55]
+
+nums.shift();
+"HELLO"
+
+nums
+(3) [23, 45, 55]
+
+//------------INDEXOF-------------------------------
+colors.indexOf("yellow");
+2
+
+colors[2];
+"yellow"
+//----------------Slice: Copy parts of an array-----
+var nums = [1, 2, 3, "a", "b", "c", 455, 32];
+undefined
+
+nums
+(8) [1, 2, 3, "a", "b", "c", 455, 32]
+
+var letters = nums.slice(3, 6);
+undefined
+
+letters
+(3) ["a", "b", "c"]

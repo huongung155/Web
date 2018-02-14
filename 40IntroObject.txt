@@ -1,0 +1,39 @@
+var dog = {
+	name: "Rusty",
+	breed: "Mutt",
+	age: 3
+}
+
+var dog = {};
+dog.name = "Rusty";
+dog.breed = "Mutt";
+dog.age = 3;
+
+dog
+{name: "Rusty", breed: "Mutt", age: 3}
+
+dog["age"]
+3
+
+dog.age
+3
+
+//cannot use dot notation if the property starts with a number
+someObject.2blah	//invalid
+someObject["2blah"] //valid
+
+//cannot usedot notation for property names with spaces
+soemObject.fav color	//invalid
+someObejct["fav color"]	//valid
+
+dog.age += 1
+4
+
+dog
+{name: "Rusty", breed: "Mutt", age: 4}
+
+dog["name"] = "Tater"
+"Tater"
+
+dog
+{name: "Tater", breed: "Mutt", age: 4}

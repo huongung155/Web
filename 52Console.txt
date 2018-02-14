@@ -1,0 +1,111 @@
+var tag = document.querySelector("p")
+undefined
+
+tag.classList.add("big")
+undefined
+
+tag.classList.remove("big")
+undefined
+
+tag.classList.toggle("big")	// if tag removed big, toggle will add big
+true
+
+tag.classList.toggle("big")	// if tag added big, toggle will remove big
+false
+
+var p = document.getElementsByTagName("p")[0]
+undefined
+
+p
+<p>​…​</p>​
+
+p.textContent	//textContent just extract the content, em in super does not extract
+"Corgi mixes are super adorable"
+
+p.textContent = "Corgi mixes are really super adorable"
+"Corgi mixes are really super adorable"
+
+var ul = document.querySelector("ul")
+undefined
+
+ul
+<ul>​…​</ul>​
+
+ul.textContent
+"
+	Orchids
+	Succulents
+	Tulips
+"
+
+tag.innerHTML	//innerHTML can extract style in tag
+"Corgi mixes are <em>super</em> adorable"
+
+ul.innerHTML
+"
+	<li>Orchids</li>
+	<li>Succulents</li>
+	<li>Tulips</li>
+"
+
+document.querySelector("h1").textContent = "END OF THE LESSON"
+"END OF THE LESSON"
+
+document.body.innerHTML
+"	
+	<h1>END OF THE LESSON</h1>
+	<p>Corgi mixes are <em>super</em> adorable</p>
+
+	<ul>
+		<li>Orchids</li>
+		<li>Succulents</li>
+		<li>Tulips</li>
+	</ul>
+	<img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg">
+	<img src="http://c2.staticflickr.com/8/7218/7209301894_c99d3a33c2_h.jpg">
+
+"
+
+document.body.textContent
+"	
+	END OF THE LESSON
+	Corgi mixes are super adorable
+
+	
+		Orchids
+		Succulents
+		Tulips
+	
+	
+	
+
+
+"
+
+document.body.innerHTML = "<h1>Goodbye!</h1>"
+"<h1>Goodbye!</h1>"
+
+var img1 = document.getElementsByTagName("img")[0]
+undefined
+
+img1
+<img src=​"http:​/​/​c1.staticflickr.com/​9/​8450/​8026519634_f33f3724ea_b.jpg">​
+
+img1.getAttribute("src")
+"http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg"
+
+img1.setAttribute("src", "http://c2.staticflickr.com/8/7231/6947093326_df216540ff_b.jpg")
+undefined
+
+var a = document.getElementsByTagName("a")[0]
+undefined
+
+a
+<a href=​"www.google.com">​LINK TO GOOGLE​</a>​
+
+a.setAttribute("href", "http://bing.com")
+undefined
+
+a.textContent = "LINK TO BING"
+"LINK TO BING"
+

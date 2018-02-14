@@ -1,0 +1,13 @@
+//adsr
+//edfr
+clear()
+
+alert('Hello')
+
+console.log('Hello')
+
+user = prompt("What's your name?")
+"Quan"
+user
+"Quan"
+

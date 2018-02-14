@@ -1,0 +1,73 @@
+$("h1").text()
+"jQuery Methods Demo Page"
+
+$("ul").text()
+"
+	Skit
+	Skaboe
+	Twix
+"
+
+$("li").text()
+"SkitSkaboeTwix"
+
+$("h1").text("New Text")
+[<h1>New Text</h1>]
+
+$("li").text("Rusty")
+[<li>Rusty</li>, <li>Rusty</li>, <li>Rusty</li>
+
+$("ul").html()   //like innerHTML()
+"
+	<li>Rusty</li>
+	<li>Rusty</li>
+	<li>Rusty</li>
+"
+
+$("ul").html("<li>Hacked yout UL</li><li>Cute</li>")
+
+$("li").html("<a href='Googel.com'>Google</a>")
+"
+ Google
+ Google
+"
+
+$("img").css("width")
+"600px"
+
+$("img").css("width", "200px")
+
+$("img").attr("src")
+"https://www.w3schools.com/w3images/fjords.jpg"
+
+$("img").attr("src", "https://www.w3schools.com/w3images/lights.jpg")
+
+$("input").attr("type")
+"text"
+
+$("input").attr("type", "color")//change type from text to color
+
+$("img:first-of-type").attr("src", "https://www.w3schools.com/w3images/lights.jpg")
+
+$("img").last().attr("src", "https://www.w3schools.com/w3images/lights.jpg")
+
+$("input").val()
+""
+//After typing Quan Luu in textbox
+$("input").val()
+"Quan Luu"
+
+$("input").val("Rusty")//update the input to Rusty
+
+$("select").val()
+"Ostri"
+
+$("h1").addClass("correct")
+
+$("h1").removeClass("correct")
+
+$("li").addClass("wrong")
+
+$("li").toggleClass("wrong")
+
+$("li").first().toggleClass("correct")

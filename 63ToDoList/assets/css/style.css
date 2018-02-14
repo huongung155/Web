@@ -1,0 +1,89 @@
+body{/*uigradients.com*/
+	background: #007991;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: Roboto;
+}
+
+h1{
+	background: #2890b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+
+.fa-plus{
+	float: right;
+}
+
+span{
+	background: #e74c3c;
+	height: 30px;
+	padding-top: 10px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.4s linear;
+	opacity: 0;
+}
+
+input{
+	font-size: 18px;
+	background: #f7f7f7;
+	color: #2890b9;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	/*with width and padding, the input box will overflow the div Container. To avoi:*/
+	box-sizing: border-box;
+}
+
+input:focus{/*like hover, focus is when you click in input box*/
+	background: #fff;
+	border: 3px solid #2890b9;
+	outline: none;
+}
+
+/*li:nth-of-type(2n){
+	background: #f7f7f7;
+}*/
+
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+#container{
+	border: 2px solid gray;
+	margin: 100px auto;
+	width: 360px;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}

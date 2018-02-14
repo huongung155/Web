@@ -1,0 +1,19 @@
+<%include ../partials/header%>
+
+<h1><%=campground.name%></h1>
+<img style="width: 100%;" src="<%=campground.image%>">
+<p><%=campground.description%></p>
+<a style="margin-bottom: 5px;" href="/campgrounds/<%=campground._id%>/comments/new" class="btn btn-success btn-lg" role="button">Add New Comment</a>
+<%
+    campground.comments.forEach(function(comment){
+%>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><%=comment.author%></h3>
+    </div>
+    <div class="panel-body"><%=comment.text%></div>
+</div>
+<%
+    })
+%>
+<%include ../partials/footer%>

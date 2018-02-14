@@ -1,0 +1,18 @@
+//Come up with 4 different ways to select the first <p> tag
+var tag = document.getElementById("first")
+undefined
+
+var tag = document.getElementsByClassName("special")[0]
+undefined
+
+var tag = document.getElementsByTagName("p")[0]
+undefined
+
+var tag = document.querySelector("p")
+undefined
+
+var tag = document.querySelector("#first")
+undefined
+
+var tag = document.querySelector("h1 + p")
+undefined

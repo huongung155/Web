@@ -1,0 +1,21 @@
+var colors = ["red", "orange", "yellow"];
+undefined
+for(var i = 0; i < colors.length; i++){
+    alert(colors[i]);
+}
+
+colors.forEach(function(color){
+	console.log(color);
+});
+red
+orange
+yellow
+
+function printColor(color, i){
+	console.log(color + " " + i);
+}
+colors.forEach(printColor);
+red 0
+orange 1
+yellow 2
+

@@ -1,0 +1,34 @@
+/*Firstly, Copy from initial YelpCamp*/
+
+/*Investigate the data generated from code*/
+huongung155:~/workspace/82YelpCampv2 $ mongo
+MongoDB shell version: 2.6.12
+> show dbs
+admin      (empty)
+cat_app    0.078GB
+local      0.078GB
+test       0.078GB
+yelp_camp  0.078GB
+> use yelp_camp
+switched to db yelp_camp
+> show collections
+campgrounds		/*automically pluralize when compared to var Campground = mongoose.model("Campground", campgroundSchema);*/
+system.indexes
+> db.campgrounds.find()
+
+
+/*Delete all instances when you change the attribute*/
+> show dbs
+admin      (empty)
+cat_app    0.078GB
+local      0.078GB
+test       0.078GB
+yelp_camp  0.078GB
+> use yelp_camp
+switched to db yelp_camp
+> show collections
+campgrounds
+system.indexes
+> db.campgrounds.drop()
+true
+

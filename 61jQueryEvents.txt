@@ -1,0 +1,55 @@
+$("h1").click(function(){
+	alert("h1 clicked!");
+});
+
+$("button").click(function(){
+	alert("button clicked!");
+});
+
+$("button").click(function(){
+	$(this).css("background", "pink");
+});
+
+$("button").click(function(){
+	console.log("You clicked " + $(this).text());
+});
+
+$("input[type='text']").keypress(function(){
+	console.log("You pressed a key!")
+});
+
+$("input[type='text']").keypress(function(event){
+	console.log(event)
+});
+//return all character of key you press: Key Code
+jQuery.Event {originalEvent: KeyboardEvent, type: "keypress", timeStamp: 226768.32, jQuery21403300942086391814: true, isDefaultPrevented: ƒ, …}
+
+$("input[type='text']").keypress(function(event){
+	if(event.which === 13){
+		alert("You Hit Enter");
+	}
+});
+
+$("h1").on("click", function(){
+	$("h1").css("color", "purple");
+});//if you have 3 h1, you hit first h1, 2 other h1 will change color
+//To avoid
+$("h1").on("click", function(){
+	$(this).css("color", "purple");
+});
+
+$("input[type='text']").on("keypress", function(){
+	console.log("Keypressed");
+});
+
+$("button").on("mouseenter", function(){
+	console.log("Mouse Enter");
+});
+
+$("button").on("mouseenter", function(){
+	$(this).css("font-weight", "bold");
+});//you hover the mouse, the button will change permanently
+
+$("button").on("mouseleave", function(){
+	$(this).css("font-weight", "normal");
+});

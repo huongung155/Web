@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2017, 5:57:19 PM
+    Author     : huong
+*/
+body{
+	background: linear-gradient(to right, #acb6e5, #86fde8);
+	margin: 0 auto;
+}
+
+input[type="text"], input[type="email"], textarea{
+	width : 80%;
+  	box-sizing: border-box;
+}
+
+textarea{
+	height: 20%;
+}
+
+hr{
+	width: 60%;
+	margin-left: 0;
+}
+
+form{
+	float: left;
+	width: 75%;
+}
+
+h2 + div{
+	float: right;
+	width: 25%;
+	letter-spacing: 3.5rem;
+}
+
+img{
+	width: 25%;
+}
+
+button{
+	border-style: none;
+	background: none;
+	font-size: 1.2em;
+	text-align: center;
+	width: 70%;
+}
+
+button:hover{
+	color: red;
+	transition: all 0.4s;
+}
+
+
+#firstPart{
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 10%;
+	background: gray;
+	color: white;
+	text-transform: uppercase;
+	font-size: 2em;
+	letter-spacing: .3rem;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 1.5;
+	background: url(https://udemy-images.udemy.com/course/750x422/260756_bac8_3.jpg);
+	background-position: center;
+}
+
+#name{
+	float: left;
+
+}
+
+#welcome{
+	float: right;
+	padding-right: 5%;
+}
+
+li{
+	display: inline-block;
+	font-size: 1.2em;
+	width: 20%;
+}
+
+#firstPart img{
+	float: left;
+	width: 3.5%;
+}
+
+nav{
+	background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	margin-top: 0;
+}
+
+ul{
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+a:hover{
+	color: red;
+	transition: all 0.4s;
+}

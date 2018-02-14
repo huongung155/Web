@@ -1,0 +1,77 @@
+var tag = document.getElementById("highlight")
+undefined
+
+tag		//tag is JavaScript Object and tag is list
+<li id=​"highlight">​List Item 1​</li>​
+
+console.dir(tag)	//show all methods of tag
+li#highlight
+
+var tags = document.getElementsByClassName("bolded")
+undefined
+
+tags
+(2) [li.bolded, li.bolded]
+
+tags.forEach()//cannot forEach() because tags is list not array
+VM392:1 Uncaught TypeError: tags.forEach is not a function at anonymous>:1:6
+
+tags[0]
+<li class=​"bolded">​List Item 2​</li>​
+
+tags.length
+2
+
+console.dir(tags[0])	//show all methods of tags[0]
+li.bolded
+
+var tags = document.getElementsByTagName("li")
+undefined
+
+tags
+(3) [li#highlight, li.bolded, li.bolded, highlight: li#highlight]
+
+var tags = document.getElementsByTagName("h1")
+undefined
+
+tags
+(2) [h1, h1]
+
+var tags = document.getElementsByTagName("body")
+undefined
+
+tags
+[body]
+
+var h1 = document.querySelector("h1")
+undefined
+
+h1
+<h1>​Hello​</h1>​
+
+var li = document.querySelector("#highlight")
+undefined
+
+li
+<li id=​"highlight">​List Item 1​</li>​
+
+var li = document.querySelector(".bolded") 	//get very first match item. li is not list
+undefined
+
+li
+<li class=​"bolded">​List Item 2​</li>​
+
+var li = document.querySelector("li a");
+undefined
+
+var li = document.querySelectorAll("li")
+undefined
+
+li
+(3) [li#highlight, li.bolded, li.bolded]
+
+var li = document.querySelectorAll("#highlight")	//li is a list with one item
+undefined
+
+li
+[li#highlight]

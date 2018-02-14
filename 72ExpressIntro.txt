@@ -1,0 +1,45 @@
+Difinition:
+Library, Framework: code that someone else wrote we can include in our application
+
+The most difference between library and framework is Inversion of Control, which means that when you call a library you are in control, but with a framework, control is inverted: the framework calls you
+
+All control flow (all stuff you usually write before you code the main idea) is already in the framework, your misssion is just fill out the predefined white spots (these spots are your idea)
+
+A library on the other hand is a collection of functionality that you can call
+
+
+https://expressjs.com
+
+huongung155:~/workspace/72ExpressIntro $ npm install express
+
+//Test Express
+huongung155:~/workspace/72ExpressIntro $ node app.js
+Inside/*
+	var express = require("express");
+	var app = express();
+*/
+
+//Run Express
+Inside/*
+	var express = require("express");
+	var app = express();
+
+	app.get("/", function(req, res){
+	    res.send("Hi there!");
+	});
+
+	app.get("/bye", function(req, res){
+	    res.send("Goodbye!");
+	});
+
+	app.get("/dog", function(req, res){
+	    console.log("SOMEONE access to /dog");// print on console of c9
+	    res.send("Meow!");//print on browser
+	});
+
+	//Tell Express to listen for the requests
+	app.listen(process.env.PORT, process.env.IP, function(){
+	    console.log("Server has started!!!")
+	});
+*/
+Note: Every time, we change the code, we have to Control^C to exit and restart the code. Press Preview/ Preview Running Application to preview code on browser

@@ -1,0 +1,37 @@
+huongung155:~/workspace $ mkdir Animals
+
+huongung155:~/workspace $ cd Animals
+
+huongung155:~/workspace/Animals $ mkdir AwesomeAnimals
+
+huongung155:~/workspace/Animals $ mkdir SketchyAnimals
+
+huongung155:~/workspace/Animals $ cd AwesomeAnimals
+
+huongung155:~/workspace/Animals/AwesomeAnimals $ touch Capybara.js
+
+huongung155:~/workspace/Animals/AwesomeAnimals $ touch ArcticFox.html
+
+huongung155:~/workspace/Animals/AwesomeAnimals $ touch TreeFrog.txt
+
+huongung155:~/workspace/Animals/AwesomeAnimals $ cd ..
+
+huongung155:~/workspace/Animals $ cd SketchyAnimals
+
+huongung155:~/workspace/Animals/SketchyAnimals $ touch BrownRecluse.html BulletAnt.js
+
+huongung155:~/workspace/Animals/SketchyAnimals $ mkdir Snakes
+
+huongung155:~/workspace/Animals/SketchyAnimals $ cd Snakes
+
+huongung155:~/workspace/Animals/SketchyAnimals/Snakes $ touch Cobra.css ReticulatedPython.py
+
+huongung155:~/workspace/Animals/SketchyAnimals/Snakes $ cd ..
+
+huongung155:~/workspace/Animals/SketchyAnimals $ rm BrownRecluse.html
+
+huongung155:~/workspace/Animals/SketchyAnimals $ cd ..
+
+huongung155:~/workspace/Animals $ cd ..
+
+huongung155:~/workspace $ rm -rf Animals

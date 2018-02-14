@@ -1,0 +1,84 @@
+API Source: http://omdbapi.com
+Guide on API Source: Firstly, http://www.omdbapi.com/?s=scandal&apikey=thewdb, the s is search for name of movie, the apikey is the key for api which is compulsory part. Secondly, after finding the imdbID of your movie, http://www.omdbapi.com/?i=tt2745682&apikey=thewdb, the i is your imdbID you get from first part
+
+huongung155:~/workspace $ mkdir 79MMovieSearchApp
+huongung155:~/workspace $ cd 79MMovieSearchApp
+huongung155:~/workspace/79MMovieSearchApp $ npm init
+npm install --save express ejs request
+
+Inside search.ejs
+/*
+	<h1>Search a Movie</h1>
+
+	<form action="/results" method="GET">
+	    <input type="text" placeholder="search term" name="search">
+	    <input type="submit">
+	</form>
+*/
+
+Inside results.ejs
+/*
+	<h1>Results Page</h1>
+
+	<ul>
+	    <%data["Search"].forEach(function(movie){%>
+	        <li>
+	          <strong><%= movie["Title"]%></strong> - <%= movie["Year"]%>
+	        </li>
+	    <%})%>
+	</ul>
+
+	<a href="/">Search again</a>
+*/
+
+Inside app.js
+/*
+	var express = require("express");
+	var app = express();
+	var request = require("request");
+	app.set("view engine", "ejs");
+
+	app.get("/", function(req, res) {
+    //console.log(getClientIp(req) + " is connected");
+    res.render("search");
+	});
+
+	app.get("/results", function(req, res){
+    	var query = req.query.search;
+    	var url = 'http://www.omdbapi.com/?s='+ query + '&apikey=thewdb';
+    	request(url, function(error, response, body){
+	       	if(!error && response.statusCode === 200){
+	           var data = JSON.parse(body);
+	           
+	           res.render("results.ejs", {data: data})
+	       	} 
+    	});
+	});
+
+	app.listen(process.env.PORT, process.env.IP, function(req, res){
+	    console.log("Movie App has started");
+	});
+*/
+
+To get client's IP Address
+/*
+	function getClientIp(req) {
+	    var ipAddress;
+	    // The request may be forwarded from local web server.
+	    var forwardedIpsStr = req.header('x-forwarded-for'); 
+	    if (forwardedIpsStr) {
+	    // 'x-forwarded-for' header may return multiple IP addresses in
+	    // the format: "client IP, proxy 1 IP, proxy 2 IP" so take the
+	    // the first one
+	    var forwardedIps = forwardedIpsStr.split(',');
+	    ipAddress = forwardedIps[0];
+	    }
+	    if (!ipAddress) {
+	    // If request was not forwarded
+	    ipAddress = req.connection.remoteAddress;
+	    }
+	    return ipAddress;
+	};
+
+	console.log(getClientIp(req) + " is connected");
+*/

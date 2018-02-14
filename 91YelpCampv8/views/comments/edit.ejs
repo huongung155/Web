@@ -1,0 +1,14 @@
+<%include ../partials/header%>
+
+<div class='container'>
+    <h1 style='margin: 0 auto; text-align: center;'>Edit Comment</h1>
+    <form style='margin: 0 auto; width: 40%;' method='POST' action='/campgrounds/<%=campground_id%>/comments/<%=comment._id%>?_method=PUT'>
+        <div class='form-group'>
+            <input type='text' class='form-control' placeholder='Text' name='comment[text]' value="<%=comment.text%>">
+        </div>
+        <button type='submit' class='btn btn-default btn-block'>Submit</button>
+    </form>
+</div>
+
+
+<%include ../partials/footer%>

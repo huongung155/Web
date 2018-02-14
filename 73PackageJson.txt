@@ -1,0 +1,75 @@
+Imagine, you are aeting the delicious dish in California, but you want your friends in Denmark to eat this dish.
+The first choice is that you pack all ingredients and way to cook, bring it to post office, waste money to ship.
+The second choice is you just send thru Twitter the list of ingredients and the way to cook.
+The jSon file mission is like the list in latter choie. The most important part is Dependencies
+
+huongung155:~/workspace $ mkdir 73PackageJson
+huongung155:~/workspace $ cd 73PackageJson
+huongung155:~/workspace/73PackageJson $ npm init
+name: (73PackageJson)package
+version: (1.0.0) 		/*Press Enter to pass*/
+description: Simple Package.json
+entry point: (index.js) /*Press Enter to pass*/
+test command: 			/*Press Enter to pass*/
+git repository: 		/*Press Enter to pass*/
+keywords: 				/*Press Enter to pass*/
+author: Quan Luu		/*Insert Quan Luu*/
+license: (ISC)			/*Press Enter to accept ISC*/
+Is this ok? (yes)		/*Press Enter to accept*/
+
+huongung155:~/workspace/73PackageJson $ ls
+package.json
+
+The package.json like:
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Simple Package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quan Luu",
+  "license": "ISC"
+ }
+
+huongung155:~/workspace/73PackageJson $ npm install express --save
+/*save in above line is to save the version of express in package.json*/
+/*In the dependencies, the version of express was show*/
+
+The package.json like:
+{
+  "name": "version",
+  "version": "1.0.0",
+  "description": "Simple Package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quan Luu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
+
+huongung155:~/workspace/73PackageJson $ npm install cat-me --save
+/*save in above line is to save the version of cat-me in package.json*/
+/*In the dependencies, the version of express was show*/
+
+The package.json like:
+{
+  "name": "version",
+  "version": "1.0.0",
+  "description": "Simple Package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quan Luu",
+  "license": "ISC",
+  "dependencies": {
+    "cat-me": "^1.0.3",
+    "express": "^4.16.2"
+  }
+}

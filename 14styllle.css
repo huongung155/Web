@@ -1,0 +1,30 @@
+/*Arrange specificity from least to most specific*/
+/*Type Selectors*/
+li{
+
+}
+
+li a{
+
+}
+
+li + a{
+
+}
+/*Class, Attribute and Pseodo-class Selectors*/
+/*Class*/.hello{
+
+}
+
+/*Attribute*/input[type="text"]{
+
+}
+
+/*Pseodo-class Selectors*/input:checked{
+
+}
+
+/*Pseodo-class Selectors*/a:hover{
+
+}
+/*ID Selectors*/

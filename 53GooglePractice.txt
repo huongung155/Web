@@ -1,0 +1,54 @@
+Original Google: https://www.google.com/ncr
+
+var logo = document.querySelector("#hplogo")
+undefined
+
+logo
+<img alt=​"Google" height=​"92" id=​"hplogo" src=​"/​images/​branding/​googlelogo/​2x/​googlelogo_color_272x92dp.png" srcset=​"/​images/​branding/​googlelogo/​1x/​googlelogo_color_272x92dp.png 1x, /​images/​branding/​googlelogo/​2x/​googlelogo_color_272x92dp.png 2x" style=​"padding-top:​109px" width=​"272" onload=​"window.lol&&lol()​">​
+
+logo.setAttribute("srcset", "http://c2.staticflickr.com/8/7231/6947093326_df216540ff_b.jpg")
+undefined
+
+logo.style.width = "100px"
+"100px"
+
+logo = document.getElementsByTagName("a")
+(55) [a, a, a.gb_P, a.gb_P, a.gb_b.gb_6b, a#gb192.gb_O, a#gb1.gb_O, a#gb8.ggb36: a#gb36.gb_O, gb78: a#gb78.gb_O, …]
+
+logo.setAttribute()	//cannot implement because logo is list
+Uncaught TypeError: logo.setAttribute is not a function
+    at <anonymous>:1:6
+
+for(var i = 0; i < logo.length; i++){
+	console.log(logo[i].textContent)
+}
+About
+Store
+Gmail
+VM2295:2 Images
+VM2295:2 
+VM2295:2 My Account
+VM2295:2 Search
+VM2295:2 Maps
+VM2295:2 YouTube
+VM2295:2 Play
+undefined
+
+for(var i = 0; i < logo.length; i++){
+	logo[i].style.color = "pink"
+}
+"pink"
+
+for(var i = 0; i < logo.length; i++){
+	console.log(logo[i].getAttribute("href"))
+}
+VM2385:2 /intl/en/about.html?fg=1
+VM2385:2 https://store.google.com/?utm_source=hpp_permanent&utm_medium=google_oo&utm_campaign=GS100042
+VM2385:2 https://mail.google.com/mail/?tab=wm
+VM2385:2 https://www.google.com/imghp?hl=en&tab=wi
+undefined
+
+for(var i = 0; i < logo.length; i++){
+	logo[i].setAttribute("href", "https://bing.com")
+}
+undefined

@@ -1,0 +1,217 @@
+<html>
+<head>
+	<title>Circles</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+		var randomColor = function(){
+			var r = Math.random() * 256;
+			var g = Math.random() * 256;
+			var b = Math.random() * 256;
+			return "rgb(" + r + ", " + g + ", " + b + ")";
+		};
+
+		var keyData = {
+			q: {
+				sound: new Howl({
+		  		src: ['sounds/bubbles.mp3']
+				}),
+				color: randomColor()
+			},
+			w: {
+				sound: new Howl({
+		  		src: ['sounds/clay.mp3']
+				}),
+				color: randomColor()
+			},
+			e: {
+				sound: new Howl({
+		  		src: ['sounds/confetti.mp3']
+				}),
+				color: randomColor()
+			},
+			r: {
+				sound: new Howl({
+		  		src: ['sounds/corona.mp3']
+				}),
+				color: randomColor()
+			},
+				t: {
+				sound: new Howl({
+		  		src: ['sounds/dotted-spiral.mp3']
+				}),
+				color: randomColor()
+			},
+			y: {
+				sound: new Howl({
+		  		src: ['sounds/flash-1.mp3']
+				}),
+				color: randomColor()
+			},
+			u: {
+				sound: new Howl({
+		  		src: ['sounds/flash-2.mp3']
+				}),
+				color: randomColor()
+			},
+			i: {
+				sound: new Howl({
+		  		src: ['sounds/flash-3.mp3']
+				}),
+				color: randomColor()
+			},
+			o: {
+				sound: new Howl({
+					src: ['sounds/glimmer.mp3']
+				}),
+				color: randomColor()
+			},
+			p: {
+				sound: new Howl({
+		  		src: ['sounds/moon.mp3']
+				}),
+				color: randomColor()
+			},
+			a: {
+				sound: new Howl({
+		  		src: ['sounds/pinwheel.mp3']
+				}),
+				color: randomColor()
+			},
+			s: {
+				sound: new Howl({
+		  		src: ['sounds/piston-1.mp3']
+				}),
+				color: randomColor()
+			},
+				d: {
+				sound: new Howl({
+		  		src: ['sounds/piston-2.mp3']
+				}),
+				color: randomColor()
+			},
+			f: {
+				sound: new Howl({
+		  		src: ['sounds/prism-1.mp3']
+				}),
+				color: randomColor()
+			},
+			g: {
+				sound: new Howl({
+		  		src: ['sounds/prism-2.mp3']
+				}),
+				color: randomColor()
+			},
+			h: {
+				sound: new Howl({
+		  		src: ['sounds/prism-3.mp3']
+				}),
+				color: randomColor()
+			},
+			j: {
+				sound: new Howl({
+		  		src: ['sounds/splits.mp3']
+				}),
+				color: randomColor()
+			},
+			k: {
+				sound: new Howl({
+		  		src: ['sounds/squiggle.mp3']
+				}),
+				color: randomColor()
+			},
+			l: {
+				sound: new Howl({
+		  		src: ['sounds/strike.mp3']
+				}),
+				color: randomColor()
+			},
+			z: {
+				sound: new Howl({
+		  		src: ['sounds/suspension.mp3']
+				}),
+				color: randomColor()
+			},
+			x: {
+				sound: new Howl({
+		  		src: ['sounds/timer.mp3']
+				}),
+				color: randomColor()
+			},
+			c: {
+				sound: new Howl({
+		  		src: ['sounds/ufo.mp3']
+				}),
+				color: randomColor()
+			},
+			v: {
+				sound: new Howl({
+		  		src: ['sounds/veil.mp3']
+				}),
+				color: randomColor()
+			},
+			b: {
+				sound: new Howl({
+		  		src: ['sounds/wipe.mp3']
+				}),
+				color: randomColor()
+			},
+			n: {
+				sound: new Howl({
+					src: ['sounds/zig-zag.mp3']
+				}),
+				color: randomColor()
+			},
+			m: {
+				sound: new Howl({
+		  		src: ['sounds/moon.mp3']
+				}),
+				color: randomColor()
+			}
+		};
+		/*var sound1 = new Howl({
+ 					src: ['sounds/bubbles.mp3']
+					});
+		var sound2 = new Howl({
+ 					src: ['sounds/clas.mp3']
+					});*/
+
+		//Source: http://paperjs.org/tutorials/paths/creating-predefined-shapes/
+		var circles = []
+		function onKeyDown(event) {
+			//keyData[event.key];
+			if(keyData[event.key]){
+				var maxPoint = new Point(view.size.width, view.size.height);
+				var point = maxPoint * Point.random();
+				var circle = new Path.Circle(point, 100);
+				circle.fillColor = keyData[event.key].color;
+				keyData[event.key].sound.play();
+			}
+			
+			
+			//circle.fillColor = "rgb(" + r + ", " + g + ", " + b + ")";
+			circles.push(circle);
+		}
+		//above function is equivalent to document.querySelector("div").document.addEventListener()
+
+		//var animatedCircle = new Path.Circle(new Point(300, 300), 50);
+		//animatedCircle.fillColor = "red";
+
+		function onFrame(event){
+			for(var i = 0; i < circles.length; i++){
+				circles[i].fillColor.hue++;
+				circles[i].scale(0.9);
+				if(circles[i].area < 1){
+					circles[i].remove();//remove circle from screen
+					circles.splice(i, 1);//remove from array
+					i--;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

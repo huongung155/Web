@@ -1,0 +1,62 @@
+4
+4
+
+4
+4
+
+1
+1
+
+4+1
+5
+
+1/3
+0.3333333333333333
+
+1-54
+-53
+
+2+5
+7
+
+(3*8)++5
+VM484:1 Uncaught ReferenceError: Invalid left-hand side expression in postfix operation
+
+(3*8)+5
+29
+
+10%3
+1
+
+"hello class!"
+"hello class!"
+
+'dogs are awesome'
+"dogs are awesome"
+
+"hello'
+VM500:1 Uncaught SyntaxError: Invalid or unexpected token
+
+"I can't stop eating"
+"I can't stop eating"
+
+'I can't stop eating'
+VM504:1 Uncaught SyntaxError: Unexpected identifier
+
+"hi" + "goodbye"
+"higoodbye"
+
+"hi " + "goodbye"
+"hi goodbye"
+
+"she said \"goodbye\" "
+"she said "goodbye" "
+
+"To see the backslash\\"
+"To see the backslash\"
+
+"Hello".length
+5
+
+"Hello"[0]
+"H"

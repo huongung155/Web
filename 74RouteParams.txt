@@ -1,0 +1,34 @@
+This is the link for my server:
+https://lmq-huongung155.c9users.io
+
+app.get("*", function(req, res) {
+    res.send("YOU ARE A STAR");
+});
+/*Note: * is to access all route. (For example, https://lmq-huongung155.c9users.io/adada, https://lmq-huongung155.c9users.io/dogs). That is like * in CSS*/
+
+app.get("/", function(req, res){
+    res.send("Hi there!");
+});
+/*Note: / is to access home route. The home route: https://lmq-huongung155.c9users.io*/
+
+However, if * is coded before / like:
+app.get("/", function(req, res){
+    res.send("Hi there!");
+});
+app.get("/bye", function(req, res){
+    res.send("Goodbye!");
+});
+Al route of my server will route to * because it is biggest specificity. So, to avoid, we should put * in the end after listening part
+
+app.get("/r/:subName", function(req, res) {
+    res.send("WELCOME TO SUBWEB!");
+})
+/*To access web with pattern https://lmq-huongung155.c9users.io/r/adasdasdasd but the different pattern like https://lmq-huongung155.c9users.io/r/asdasdasd/zczxc is not work*/
+
+app.get("/r/:subName/comments/:id/:title", function(req, res) {
+    console.log(req.params);
+    var subName = req.params.subName;
+    res.send("WELCOME TO THE " + subName);
+})
+/*Access the pattern https://lmq-huongung155.c9users.io/r/asdasdasd/zczxc/comments/123123/adqwre*/
+Note: the console.log(req.params) will return the value of :subName, :id and :title

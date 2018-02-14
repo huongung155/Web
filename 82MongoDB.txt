@@ -1,0 +1,45 @@
+#Intro to Databases
+*What is a database?
+*SQL(relational) vs. NoSQL(non-relational)
+
+#Intro to MongoDB
+*What is MongoDB?
+*Why are using it?
+
+#Most popular stack:
+MEAN stack:
+	-MongoDB
+	-Express
+	-Angular
+	-Node
+
+huongung155:~ $ ls
+lib/  workspace/
+
+huongung155:~ $ mkdir data
+huongung155:~ $ ls
+data/  lib/  workspace/
+
+huongung155:~ $ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+huongung155:~ $ chmod a+x mongod
+huongung155:~ $ ls
+data/  lib/  mongod*  workspace/
+
+huongung155:~ $ ./mongod
+
+New Tab Terminal to make sure mongo server is open
+
+^C #exit
+
+//======================================================
+On Webstorm
+Install mongo plugin in webstorm
+
+First: 
+https://mphcmiuedu-my.sharepoint.com/personal/ititiu15033_student_hcmiu_edu_vn/_layouts/15/guestaccess.aspx?docid=1d0c4436039154dcdacadcee7cb40352e&authkey=AY3kxrdrbAwdILFPoDW68_M&e=52144a7893de46a0ac5079ec7e42d114
+
+Second, put it in terminal (Alt + F12) in webstorm
+F:\Web\81Database>mongod.exe --dbpath D:\MongoDB\DB
+
+Third, connect mongo by clicking left mouse on localhost
+https://mphcmiuedu-my.sharepoint.com/personal/ititiu15033_student_hcmiu_edu_vn/_layouts/15/guestaccess.aspx?docid=177f2f9fd53c344aba3a1d7461e563908&authkey=AdaDIiGptQB2E173cSDFHIs&e=501a698bbaef46dd8e6c7007558ab892

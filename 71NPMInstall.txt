@@ -1,0 +1,56 @@
+npmjs.com
+
+huongung155:~/workspace/71NPMInstall $ touch app.js
+
+huongung155:~/workspace/71NPMInstall $ npm install cat-me
+
+//Check cat-me
+huongung155:~/workspace/71NPMInstall $ ls
+node_modules/
+
+huongung155:~/workspace/71NPMInstall $ node app.js
+Inside/*
+	var cat = require("cat-me");
+
+	console.log(cat())
+*/
+
+huongung155:~/workspace/71NPMInstall $ npm install knock-knock-jokes
+
+huongung155:~/workspace/71NPMInstall $ node app.js
+Inside/*
+	var joke = require("knock-knock-jokes");
+	console.log(joke());
+*/
+
+ec2-user:~/environment/71NPMInstall $ npm install faker
+
+huongung155:~/workspace/71NPMInstall $ node app.js
+Inside/*
+	var faker = require("faker");
+	var companyName = faker.company.companyName();
+	var price = faker.commerce.price();
+
+	console.log("==================");
+	console.log("WELCOME TO MY SHOP");
+	console.log("==================");
+	for(var i = 0; i <  10; i++){
+	    console.log(companyName + " - $" + price);
+	    companyName = faker.company.companyName();
+	    price = faker.commerce.price();
+	}
+*/
+==================
+WELCOME TO MY SHOP
+==================
+Heller, King and Ernser - $114.00
+Ryan and Sons - $327.00
+Rolfson, Muller and Towne - $231.00
+Homenick, Bradtke and Thompson - $285.00
+Kulas, Toy and Aufderhar - $337.00
+Swift, Herman and Ernser - $799.00
+Romaguera, Flatley and Kreiger - $489.00
+Hirthe, Muller and Koelpin - $111.00
+Predovic LLC - $304.00
+Greenholt - Rau - $380.00
+

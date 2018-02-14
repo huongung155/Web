@@ -1,0 +1,32 @@
+var obj = {
+	name: "Chuck",
+	age: 45,
+	isCool: false,
+	friends: ["Bob", "Tina"],
+	add: function(x, y){
+		return x + y;
+	}
+}
+
+obj.add(10, 6)
+16
+
+//=======Keyword This===========
+var comments = {};
+comments.data = ["Good Job!", "Bye", "Lame..."];
+function print(arr){
+	arr.forEach(function(i){
+		console.log(i);
+	});
+}
+print(comments.data);
+
+comments.print = function(){
+	this.data.forEach(function(i){
+		console.log(i);
+	})
+};
+comments.print()
+Good Job!
+Bye
+Lame...

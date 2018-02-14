@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>EmailSendingWebApp</display-name>
+    <!-- SMTP settings -->
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>haanh16091997@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>chuabiet155</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>RatingController</servlet-name>
+        <servlet-class>controller.RatingController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MovieController</servlet-name>
+        <servlet-class>controller.MovieController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LinkController</servlet-name>
+        <servlet-class>controller.LinkController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryController</servlet-name>
+        <servlet-class>controller.CategoryController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RatingController</servlet-name>
+        <url-pattern>/RatingController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MovieController</servlet-name>
+        <url-pattern>/MovieController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LinkController</servlet-name>
+        <url-pattern>/LinkController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryController</servlet-name>
+        <url-pattern>/CategoryController</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,45 @@
+HTML FIle: 52ManipulatingStyle
+var h1 = document.querySelector("h1")
+undefined
+
+h1
+<h1>​Welcome to MY DOM Demo​</h1>​
+
+h1.addEventListener("click", function(){
+	alert("h1 was clicked!");
+})
+
+h1.addEventListener("click", function(){
+	h1.style.background = "orange";
+})
+
+document.querySelector("ul").addEventListener("click", function(){
+	console.log("You Clicked the UL");
+})
+(10) You Clicked the UL
+
+var lis = document.querySelectorAll("li");
+undefined
+
+lis
+(3) [li, li, li]
+
+for(var i = 0; i < lis.length; i++){
+	lis[i].addEventListener("click", function(){
+		this.style.color = "pink"	//this denotes the lis[i]
+	});
+}
+
+//Dom Exercise
+var but = document.querySelector("button")
+undefined
+
+but
+<button>​CLICK ME​</button>​
+
+var bod = document.querySelector("body")
+undefined
+
+but.addEventListener("click", function(){
+	bod.classList.toggle("butt");
+})

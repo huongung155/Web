@@ -1,0 +1,29 @@
+function sing(){
+	console.log('How I wonder');
+	console.log("Twinkle twinkle");
+}
+
+How I wonder
+Twinkle twinkle
+How I wonder
+Twinkle twinkle
+How I wonder
+Twinkle twinkle
+How I wonder
+Twinkle twinkle
+How I wonder
+Twinkle twinkle
+
+setInterval(sing, 2000);
+2
+
+clearInterval(2);
+
+
+setInterval(function(){
+	console.log('How I wonder');
+	console.log("Twinkle twinkle");
+	}, 2000)
+3
+
+clearInterval(3);

@@ -1,0 +1,21 @@
+h1{
+	color: #FF8000;
+	/*border-color: purple;
+	border-width: 5px;
+	border-style: solid;*/
+
+	border: 5px solid purple;
+}
+
+li{
+	color: rgb(0, 0, 255);
+}
+h4{
+	color: rgba(0, 000, 255, .2);
+}
+body{
+	/*background: pink;*/
+	background: url(https://c.pxhere.com/photos/c6/1a/deck_wooden_rain_water_slick_slippery-1261602.jpg!d);
+	background-repeat: no-repeat;
+	background-size: cover;
+}

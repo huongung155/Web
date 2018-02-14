@@ -1,0 +1,24 @@
+var y = 99;
+
+y
+99
+
+function doMath(){
+	console.log(y);
+}
+
+doMath()
+99
+
+function doMath(){
+	y= 100;
+	console.log(y);
+}
+
+y
+99
+
+doMath()
+100
+
+--------------------------------------

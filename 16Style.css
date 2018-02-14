@@ -1,0 +1,61 @@
+/*-----------------------------------------------------*/
+/*font family*/
+p{
+	font-family: Times New Roman;
+}
+
+h1{
+	font-family: Slabo 27px;
+	/*Need to copy font website in html file before using it here*/
+}
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*font size*/
+/*As usual, we set the font size of body in the very beginning and set all tags follow font size of body which based on em*/
+body{
+	font-size: 10px
+}
+
+h1{
+	font-size: 2.0em;
+}
+p{
+	font-size: 2.5em
+}
+span{
+	font-size: 2.0em;
+}
+/*2.0em will extend the font size of span such that twice times larger than parent element of span*/
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*font weight: define how thick the lines are (value: from 100 to 800)*/
+p{
+	font-weight: 200;
+}
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*line height: distance between two lines*/
+p{
+	line-height: 1.5;
+}
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*text align*/
+h1{
+	text-align: center;
+}
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*Text Decoration*/
+h1{
+	text-decoration: underline;
+}
+span{
+	text-decoration: line-through;
+}
+/*-----------------------------------------------------*/

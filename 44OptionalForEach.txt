@@ -1,0 +1,46 @@
+var colors = ["red", "orange", "yellow"];
+function myForEach(arr, func){
+	for(var i = 0; i < colors.length; i++){
+		func(arr[i]);
+	}
+}
+myForEach(colors, alert) // =
+myForEach(colors, function(){
+	alert("HI");
+})
+
+(function(name){
+	console.log("IM A FUNCTION " + name);
+})	//like func in line 2
+ƒ (name){
+	console.log("IM A FUNCTION" + name);
+}
+
+(function(name){
+	console.log("IM A FUNCTION" + name);
+})("Quan")	//like func(arr[i]) in line 4
+IM A FUNCTION Quan
+
+myForEach(colors, function(color){
+	console.log(color);
+});
+red
+orange
+yellow
+
+//----create array.myForEach()-------------
+Array.prototype.myForEach = function(func){
+	for(var i = 0; i < this.length; i++){
+		func(this[i]);
+	}
+}
+ƒ (func){
+	for(var i = 0; i < this.length; i++){
+		func(this[i]);
+	}
+}
+
+var friends = ["Charlie", "Dave", "Maddy", "Catilin"];
+friends.myForEach(function(name){	//func in line 32 just find the function in line 44 and func(this[i]) just does line 45 with name = this[i]
+	console.log("I love " + name);
+})

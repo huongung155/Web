@@ -1,0 +1,41 @@
+<%include partials/header%>
+
+<div class="container">
+    <div style="padding-top: 1%;" class="page-header">
+        <h1>RESTful Blog App</h1>
+    </div>
+
+
+<%
+    blogs.forEach(function(blog){
+%>
+    <div class="media">
+        <div class="media-left">
+            <a href="/blogs/<%=blog._id%>">
+                <img style="max-width: 10em; max-height: 10em;" class="media object" src="<%=blog.image%>">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media heading"><%=blog.title%></h4>
+            <h5><small><%=blog.created.toDateString()%></small></h5>
+<%
+            if(blog.body.length > 20){
+%>
+            <p><%=blog.body.substring(0, 20)%>...</p>
+<%
+            }else{
+%>
+            <p><%=blog.body%></p>
+<%
+            }
+%>
+            <a href="/blogs/<%=blog._id%>" class="btn btn-primary" role="button">More Info</a>
+        </div>
+        <hr>
+    </div>
+<%
+    });
+%>
+</div>
+
+<%include partials/footer%>

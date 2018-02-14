@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Form Exercise</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<label for="firstName">First Name:</label>
+		<input name="name" id="firstName" type="text" placeholder="John" required>
+
+		<label for="lastName">Last Name:</label>
+		<input name="name" id="lastName" type="text" placeholder="Smith" required>
+
+		<div>
+			<label for="male">Male:</label>
+			<input name="gender" id="male" type="radio" value="MALE">
+
+			<label for="female">Female</label>
+			<input name="gender" id="female" type="radio" values="FEMALE">
+
+			<label for="other">Other:</label>
+			<input name="other" id="other" type="radio" value="OTHER">
+		</div>
+
+		<div>
+			<label>Email:
+				<input name="email" id="email" type="email" placeholder="Your Email" required>
+			</label>
+			<label>Password:
+				<input name="password" id="password" type="password" pattern=".{10,}" required title="10 or more characters">
+			</label>
+		</div>
+
+		<div>
+			<label>
+				Birthday:
+				<select name="month">
+					<option>Month</option>
+					<option value="1">Jan</option>
+					<option value="2">Feb</option>
+					<option value="3">Mar</option>
+				</select>
+				<select name="day">
+					<option>Day</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+				<select name="year">
+					<option>Year</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+				</select>
+			</label>
+		</div>
+
+		<div>
+			<label for="agree">I agree to the terms and conditions</label>
+			<input id="agree" type="checkbox">
+		</div>
+
+		<button>Submit</button>
+	</form>
+</body>
+</html>

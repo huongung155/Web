@@ -1,0 +1,47 @@
+New Terminal Tab
+huongung155:~/workspace $ mongo
+
+help
+> show dbs
+> use demo
+switched to db demo
+
+Query:
+C: Create: db.dogs.insert({name: "Rusty", breed: "Mutt"})
+R: Read: db.dogs.find(); db.dogs.find({name: "Rusty"})
+U: Update: db.dogs.update({name: "Rusty"}, {$set: {name: "Tater", isCute: true}})
+D: Delete: db.dogs.remove({breed: "noodle"}).limit(1)
+
+> db.dogs.insert({name: "Rusty", breed: "Mutt"})
+
+> show collections
+dogs
+system.indexes
+
+> db.dogs.find()
+{ "_id" : ObjectId("59f454acfdb7778b45946c04"), "name" : "Rusty", "breed" : "Mutt" }
+
+> db.dogs.find({name: "Rusty"})
+
+> db.dogs.insert({name: "Lucy", breed: "Mutt"})
+
+> db.dogs.find({breed: "Mutt"})
+{ "_id" : ObjectId("59f454acfdb7778b45946c04"), "name" : "Rusty", "breed" : "Mutt" }
+{ "_id" : ObjectId("59f45633fdb7778b45946c05"), "name" : "Lucy", "breed" : "Mutt" }
+
+> db.dogs.update({name: "Lucy"}, {breed: "noodle"})
+
+> db.dogs.find()
+{ "_id" : ObjectId("59f454acfdb7778b45946c04"), "name" : "Rusty", "breed" : "Mutt" }
+{ "_id" : ObjectId("59f45633fdb7778b45946c05"), "breed" : "noodle" } #name: "Lucy" is overwritten
+
+To avoid:
+> db.dogs.update({name: "Rusty"}, {$set: {name: "Tater", isCute: true}})
+> db.dogs.find()
+{ "_id" : ObjectId("59f454acfdb7778b45946c04"), "name" : "Tater", "breed" : "Mutt", "isCute" : true }
+{ "_id" : ObjectId("59f45633fdb7778b45946c05"), "breed" : "noodle" }
+
+> db.dogs.remove({breed: "noodle"})
+> db.dogs.remove({breed: "noodle"}).limit(1) # If 2 noodle but you want to remove only 1 noodle
+
+> ^C #exit

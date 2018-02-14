@@ -1,0 +1,66 @@
+Tutorial: https://www.davidbaumgold.com/tutorials/command-line/
+
+huongung155:~/workspace $ node -v
+v6.11.2
+#Find the version of node
+
+huongung155:~/workspace $ ls
+69IntroC9/
+#Show items on the current path
+
+huongung155:~/workspace $ cd 69IntroC9
+#Change directory to 69IntroC9
+
+huongung155:~/workspace/69IntroC9 $ ls
+Message.txt
+#Show items on the current path
+
+huongung155:~/workspace/69IntroC9 $ ls
+Hello.html  Message.txt
+#Show items on the current path
+
+huongung155:~/workspace/69IntroC9 $ cd ..
+#Back the directory
+
+huongung155:~/workspace $ ls
+69IntroC9/
+#Show items on the current path
+
+huongung155:~/workspace $ cd 69IntroC9
+
+huongung155:~/workspace/69IntroC9 $ ls
+Hello.html  Message.txt
+
+huongung155:~/workspace/69IntroC9 $ ls
+Colors/  Hello.html  Message.txt
+
+huongung155:~/workspace/69IntroC9 $ cd colors
+bash: cd: colors: No such file or directory
+#Wrong item
+
+huongung155:~/workspace/69IntroC9 $ cd Colors
+
+huongung155:~/workspace/69IntroC9/Colors $ ls
+
+huongung155:~/workspace/69IntroC9 $ cd ..
+
+huongung155:~/workspace $ cd 69IntroC9/Colors
+
+huongung155:~/workspace/69IntroC9/Colors $ touch orange.txt
+#Create orange.txt in Colors
+
+huongung155:~/workspace/69IntroC9/Colors $ ls
+Text.txt  orange.txt
+
+huongung155:~/workspace/69IntroC9/Colors $ mkdir FavColors
+#Create directory/ Folder  FavColors
+
+huongung155:~/workspace/69IntroC9/Colors/FavColors $ rm blue.txt
+#Remove blue.txt
+
+huongung155:~/workspace/69IntroC9/Colors/FavColors $ cd ..
+
+huongung155:~/workspace/69IntroC9/Colors $ cd ..
+
+huongung155:~/workspace/69IntroC9 $ rm -rf Colors
+#Remove recursive force Directory Colors

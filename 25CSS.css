@@ -1,0 +1,25 @@
+body{
+	background: url(https://mphcmiuedu-my.sharepoint.com/personal/ititiu15033_student_hcmiu_edu_vn/_layouts/15/guestaccess.aspx?docid=14a0933f42d78472ab9a85b5f0e545cf7&authkey=AelTmEQifz4YBH1GxCmcDz8);
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+html{
+	height: 100%;
+}
+#content{
+	text-align: center;
+	padding-top: 15%;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 
+				0px 8px 13px rgba(0, 0, 0, 0.1), 
+				0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+hr{
+	width: 40%;
+	border-top: 1px solid #F8F8F8;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}

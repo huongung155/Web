@@ -1,0 +1,212 @@
+huongung155:~/workspace $ mkdir 76EJS
+huongung155:~/workspace $ cd 76EJS
+huongung155:~/workspace/76EJS $ touch app.js
+huongung155:~/workspace/76EJS $ npm init
+name: (76EJS) introejs
+version: (1.0.0) 
+description: EJS
+entry point: (app.js) app.js
+test command: 
+git repository: 
+keywords: 
+author: Quan Luu
+license: (ISC) 
+
+huongung155:~/workspace/76EJS $ npm install express --save
+huongung155:~/workspace/76EJS $ c9 app.js
+
+Inside app.js
+/*
+	var express = require("express");
+	var app = express();
+
+	app.get("/", function(req, res){
+	    res.render("home.ejs");
+	});
+
+	app.listen(process.env.PORT, process.env.IP, function(){
+	    console.log("Server has started");
+});
+*/
+
+huongung155:~/workspace/76EJS $ mkdir views
+huongung155:~/workspace/76EJS $ touch views/home.ejs
+huongung155:~/workspace/76EJS $ c9 views/home.ejs
+huongung155:~/workspace/76EJS $ npm install ejs --save
+Inside home.ejs
+/*
+	<h1>EJS file</h1>
+	<img src="https://mphcmiuedu-my.sharepoint.com/personal/ititiu15033_student_hcmiu_edu_vn/_layouts/15/guestaccess.aspx?docid=17f6660f41a9b4cd3978e88b15b01584e&authkey=AbQJEJiu6QCgCNhjJ_Tqx7E"></img>
+*/
+
+huongung155:~/workspace/76EJS $ node app.js
+
+########################################################
+
+huongung155:~/workspace/76EJS $ touch views/love.ejs
+huongung155:~/workspace/76EJS $ c9 views/love.ejs
+Inside app.js
+/*
+	var express = require("express");
+	var app = express();
+
+	app.get("/", function(req, res){
+	    res.render("home.ejs");
+	});
+
+	app.get("/fallinlovewith/:thing", function(req, res){
+	    var thing = req.params.thing;
+	    res.render("love.ejs", {thingVar: thing});
+	})
+
+	app.listen(process.env.PORT, process.env.IP, function(){
+	    console.log("Server has started");
+	});
+*/
+Inside love.ejs
+/*
+	<h1>You fell in love with:<%= thingVar%></h1>
+	<p>This is the love.ejs</p>
+*/
+
+Important Note: when we use {thingVar:thing} and you print thingVar on ejs by <%= thingVar%> you must make sure that thingVar is var not array or object
+
+########################################################
+Inside love.ejs
+/*
+	<h1>You fell in love with:<%= thingVar.toUpperCase()%></h1>
+
+	<%if(thingVar.toLowerCase() === "rusty"){%>
+	    <p>GOOD CHOICE</p>
+	<%}%>
+
+	<p>This is the love.ejs</p>
+*/
+Note: In the love.ejs, <%= %> will show the result of content inside on browser. <% %> on the other hand just does logic, does not show cotent on browser
+Inside app.js
+/*
+	like previous app.js
+*/
+
+########################################################
+huongung155:~/workspace/76EJS $ touch views/posts.ejs
+huongung155:~/workspace/76EJS $ c9 views/posts.ejs
+Inside posts.ejs
+/*
+	<h1>The Posts Page</h1>
+	<%posts.forEach(function(post){%>
+	    <li><%= post.title%> - <strong><%= post.author%></strong></li>
+	<%})%>
+*/
+Add to app.js
+/*
+	app.get("/posts", function(req, res) {
+    var posts = [
+        {title: "Post 1", author: "Susy"},
+        {title: "My adorable pet bunny", author: "Charlie"},
+        {title: "Can you believe this pomsky", author: "Colt"}
+    ];
+    res.render("posts.ejs", {posts: posts});
+})
+*/
+#######################################################
+The tree directory:
+76EJS(directory)
+	public(directory)
+		app.css
+	views(directory)
+		partials(directory)
+			footer.ejs
+			header.ejs
+		home.ejs
+		love.ejs
+		posts.ejs
+	app.js
+	package.json
+
+
+Inside app.js
+/*
+	var express = require("express");
+	var app = express();
+
+	app.use(express.static("public"));/*tell express to serve the content of CSS in the public directory*/
+	app.set("view engine", "ejs");/*Instead of writing res.render(home.ejs), we write res.render(home)*/
+
+	app.get("/", function(req, res){
+	    res.render("home");
+	});
+
+	app.get("/fallinlovewith/:thing", function(req, res){
+	    var thing = req.params.thing;
+	    res.render("love", {thingVar: thing});
+	});
+
+	app.get("/posts", function(req, res) {
+	    var posts = [
+	        {title: "Post 1", author: "Susy"},
+	        {title: "My adorable pet bunny", author: "Charlie"},
+	        {title: "Can you believe this pomsky", author: "Colt"}
+	    ];
+	    res.render("posts", {posts: posts});
+	})
+
+	app.listen(process.env.PORT, process.env.IP, function(){
+	    console.log("Server has started");
+	});
+*/
+
+Inside header.ejs
+/*
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <title>Demo App</title>
+	        <link rel="stylesheet" href="/app.css">        
+	    </head>
+	    <body>
+*/
+Note: In the link of CSS, the reason for /app.css is you tell the ejs which include this header finds the CSS file in parent of app.css
+
+Inside footer.ejs
+/*
+		    <p>Trademark 2017</p>
+	    </body>
+	</html>
+*/
+
+Inside love.ejs
+/*
+	<%include partials/header%>
+
+	<h1>You fell in love with:<%= thingVar.toUpperCase()%></h1>
+	<%if(thingVar.toLowerCase() === "rusty"){%>
+	    <p>GOOD CHOICE</p>
+	<%}else{%>
+	    <p>Bad Choice</p>
+	<%}%>
+	<p>This is the love.ejs</p> 
+
+	<%include partials/footer%>
+*/
+Note: to include coorect path for header and footer, we need partials/header.ejs
+
+Inside home.ejs
+/*
+	<%include partials/header%>
+
+	<h1>EJS file</h1>
+	<img src="https://mphcmiuedu-my.sharepoint.com/personal/ititiu15033_student_hcmiu_edu_vn/_layouts/15/guestaccess.aspx?docid=17f6660f41a9b4cd3978e88b15b01584e&authkey=AbQJEJiu6QCgCNhjJ_Tqx7E"></img>
+	<%include partials/footer%>
+*/
+
+Inside posts.ejs
+/*
+	<%include partials/header%>
+
+	<h1>The Posts Page</h1>
+	<%posts.forEach(function(post){%>
+	    <li><%= post.title%> - <strong><%= post.author%></strong></li>
+	<%})%>
+	<%include partialsfooter%>
+*/

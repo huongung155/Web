@@ -1,0 +1,35 @@
+p{
+	/*----------------------------------------------*/
+	/*Content - width and height*/
+
+	width: 200px;/*the width of rectangle*/
+	height: 50%;/*the height of rectangle: the 50% of parent of p that is body*/
+	/*So, if we resize the size of body, the size of p also changes*/
+
+	/*----------------------------------------------*/
+	
+	/*----------------------------------------------*/
+	/*Border*/
+
+	border: 2px solid blue;
+	/*border-top: is like padding on the top*/
+	/*----------------------------------------------*/
+
+	/*----------------------------------------------*/
+	/*Paddings*/
+
+	/*padding: 10px*/
+	padding-left: 35px;
+
+	/*----------------------------------------------*/
+
+	/*----------------------------------------------*/
+	/*Margin*/
+
+	/*margin: 100px;
+	margin-top: 50px;*/
+
+	/*margin: 20px 50px 70px 10px;*/ /*margin-top, margin-right, margin-bottom, margin-left*/
+	margin: 0 auto 0 auto;
+	/*----------------------------------------------*/
+}
