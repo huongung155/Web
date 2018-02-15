@@ -247,7 +247,8 @@
 
 * Change Comments UI on the show page (_Just edit `campgrounds/show.ejs`_)
 ![alt text](https://9txyla.ch.files.1drv.com/y4m6jSAcJ19JRkFSulicSVcchW1Eg_inkijCIRDAWXxchrlXwdxKWnHgFBBGOBe4_WJdPzewDACbapg9sCcbKvNK30hpnIdhUmVYPOPYcZT0FZK6g5V3uC5dxfOZQHY3vLIenL1w5l6ZxdP4ZjNQmJFTboWhdx0Lx3NEtAbFjOp577ge7Q7A7hST-slBnflTnRVd3HtkDZK-reryzVFlttbfQ/Opera%20Snapshot_2018-02-15_145503_localhost.png?psid=1)
-	* ```javascript
+	* `href="#collapseComment"` and `aria-controls="collapseComment"` associated with `data-toggle="collapse"` is to make `<div id="collapseComment"></div>` which contains **Comments panel** collapsible when clicking `Add new comment` button
+	```javascript
 
 		<!--COMMENT SECTION START-->
         <div class="card">
@@ -259,3 +260,37 @@
                 <h4><strong>Comments</strong> <i class="fas fa-comments"></i></h4>
             </div>
      ```
+     * Collapsible Comments Panel (almost similar to prev ver)
+     ```javascript
+
+     <!--Collapse Add a comment from START-->
+            <div class="collapse" id="collapseComment">
+                <div class="card-body" style="border-left: 5px solid #00C851;">
+<%
+                    if(currentUser){
+%>
+                    <h4>Write your comment <i class="fas fa-pencil-alt"></i></h4>
+                    <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+                        <div class="form-group">
+                            <label for="user" class="sr-only">User</label>
+                            <input type="text" id="user" class="form-control" value="<%=currentUser.username%>" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment" class="sr-only">Comment</label>
+                            <textarea id="comment" class="form-control" name="comment[text]" rows="3" placeholder="Write your comment..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-sm">Comment <i class="fas fa-comments"></i></button>
+                        </div>
+                    </form>
+<%
+                    }else{
+%>
+                    <h5>You need to login before you can comment. <a href="/login">Click here</a> to go to the login page.</h5>
+<%
+                    }
+%>
+                </div>
+            </div>
+     ```
+     * `Edit Comment` is based on `Add Comments` mechanism
