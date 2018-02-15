@@ -247,3 +247,12 @@
 
 * Change Comments UI on the show page (_Just edit `campgrounds/show.ejs`_)
 	* ![alt text](https://9txyla.ch.files.1drv.com/y4m6jSAcJ19JRkFSulicSVcchW1Eg_inkijCIRDAWXxchrlXwdxKWnHgFBBGOBe4_WJdPzewDACbapg9sCcbKvNK30hpnIdhUmVYPOPYcZT0FZK6g5V3uC5dxfOZQHY3vLIenL1w5l6ZxdP4ZjNQmJFTboWhdx0Lx3NEtAbFjOp577ge7Q7A7hST-slBnflTnRVd3HtkDZK-reryzVFlttbfQ/Opera%20Snapshot_2018-02-15_145503_localhost.png?psid=1)
+	* `<!--COMMENT SECTION START-->
+        <div class="card">
+            <div class="card-header mb-2">
+                <!--Set up the Add New Comment-->
+                <a class="btn btn-success float-right" data-toggle="collapse" href="#collapseComment" aria-expanded="false" aria-controls="collapseComment"><i class="fas fa-plus"></i> Add New Comment</a>
+
+                <!--Comment secction title-->
+                <h4><strong>Comments</strong> <i class="fas fa-comments"></i></h4>
+            </div>`
