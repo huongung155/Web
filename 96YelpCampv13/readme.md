@@ -257,4 +257,5 @@
 
                 <!--Comment secction title-->
                 <h4><strong>Comments</strong> <i class="fas fa-comments"></i></h4>
-            </div>```
+            </div>
+     ```
