@@ -7,7 +7,7 @@ var express = require('express'),
     nodemailer = require('nodemailer'),
     crypto = require('crypto'),
     middleware = require('../middleware'),
-    {isLoggedIn, checkUserOwnership} = middleware;
+    {isLoggedIn, checkUserOwnership, captchaMiddleware} = middleware;
 
 //root route
 router.get('/', function(req, res){
@@ -20,7 +20,7 @@ router.get('/register', function(req, res){
 });
 
 //handle sign up logic
-router.post("/register", function(req, res){
+router.post("/register", captchaMiddleware, function(req, res){
     var newUser = new User({
         username: req.body.username,
         firstName: req.body.firstName,

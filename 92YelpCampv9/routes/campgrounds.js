@@ -5,15 +5,22 @@ var express = require('express'),
 
 //INDEX - DIsplay a list of all campground
 router.get('/', function(req, res){//should be /campground but we declare /campgrounds in app.use('/campgrounds', campgroundRoute)
-    //Get all campgrounds from DB
-    Campground.find({}, function(err, allCampgrounds){
-        if(err){
-            console.log(err);
-        }else{
-            res.render('campgrounds/index', {campgrounds: allCampgrounds});
-        }
+    var perPage = 8,
+        pageQuery = parseInt(req.query.page),
+        pageNumber = pageQuery ? pageQuery : 1;
+    Campground.find({}).skip((perPage * pageNumber) - perPage).limit(perPage).exec(function (err, allCampgrounds) {
+        Campground.count().exec(function (err, count) {
+            if(err){
+                console.log(err);
+            }else{
+                res.render('campgrounds/index', {
+                    campgrounds: allCampgrounds,
+                    current: pageNumber,
+                    pages: Math.ceil(count/perPage)
+                });
+            }
+        });
     });
-
 });
 
 //CREATE - Add new campground to DB

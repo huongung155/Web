@@ -1,6 +1,7 @@
 var Comment = require('../models/comment'),
     Campground = require('../models/campground'),
-    User = require('../models/user');
+    User = require('../models/user'),
+    request = require('request');
 var middlewareObj = {
     isLoggedIn: function(req, res, next){
         if(req.isAuthenticated()){
@@ -63,6 +64,24 @@ var middlewareObj = {
             next();
         }else {
             req.flash('error', 'Only images from images.unsplash.com allowed.\nSee https://youtu.be/Bn3weNRQRDE for how to copy image urls from unsplash.');
+            res.redirect('back');
+        }
+    },
+    captchaMiddleware: function (req, res, next) {
+        var captcha = req.body['g-recaptcha-response'];
+        if(captcha){
+            var secretKey = process.env.CAPTCHA;
+            var verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}&remoteip=${req.connection.remoteAddress}`;
+            request.get(verifyURL, (err, response, body) => {
+                if(body.success !== undefined && !body.success){
+                    req.flash('error', 'Captcha Failed');
+                    res.redirect('back');
+                }else{
+                    next();
+                }
+            })
+        }else{
+            req.flash('error', 'Please select captcha');
             res.redirect('back');
         }
     }

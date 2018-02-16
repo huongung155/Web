@@ -17,6 +17,7 @@ require('dotenv').load();
 
 var campgroundRoutes = require('./routes/campgrounds'),
     commentRoutes = require('./routes/comments'),
+    contactRoutes = require('./routes/contacts'),
     indexRoutes = require('./routes/index');
 
 // assign mongoose promise library and connect to database
@@ -59,6 +60,7 @@ app.use(function(req, res, next){
 
 app.use('/campgrounds', campgroundRoutes);//all link in router.get() starts by /campgrounds
 app.use('/campgrounds/:id/comments', commentRoutes);
+app.use('/contacts', contactRoutes),
 app.use('/', indexRoutes);
 
 module.exports = app;
