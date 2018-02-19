@@ -252,3 +252,24 @@
 * Collapsible Comments Panel (almost similar to prev ver)
 ![alt text](https://9tuofg.ch.files.1drv.com/y4mESw9kYcjGAsRBLUe--orJ0Y4n4bUowwjuYz9lEwfFaCrS0_6Gv-LJuOzvrnSL2J2xvPONXOkU3UjRAhu8VEFgNCoAtSzlCCKf8cU5uZDJntqu2qhCfYTjFhb7YoZkgwVq22LPjOcTKOD1GFjUWKxqjX4spGozciemqmud3yG11guluZyCC1W2-w2B3L_v0wbsln8DH3_68-QGt3oHEfaAA/Capture01.PNG?psid=1)
 * `Edit Comment` is based on `Add Comments` mechanism
+
+# Deploy on Heroku/mlab
+`heroku login`  
+> Enter your Heroku credentials  
+> Email: ....  
+> Password: ....  
+* Initialize the git for heroku  
+`git init`  
+`git add -A`  
+`git commit -m'test'`  
+* Create heroku: `heroku create`  
+	* `heroku apps:rename quan1609`: to easily access heroku
+	* `git remote -v`: to check heroku is also created, it creates the remote to push on heroku git
+		* > heroku  https://git.heroku.com/name..  (fetch)
+		* > heroku  https://git.heroku.com/name..  (push)
+* After creating heroku git, add and commit all changes, `git push heroku master`	
+	* Based on the package.json, heroku will npm install these package, so don't need to `push` _node_modules_
+* When some error occurs, heroku just show `Application error`, if you want to specify error, `heroku logs`
+* Make sure the `scripts/starts: "node app.js"` in package.json where the heroku follows to run app
+* Can run cmd on heroku directory `heroku run ls` or `heroku run npm i -S mongoose`
+* Replace `mongodb://localhost/test` with `process.env.DATABASEURL` (in .env file, `DATABASEURL='mongodb://huongung155:chuabiet155@ds051368.mlab.com:51368/yelpcamp'`)

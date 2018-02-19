@@ -15,7 +15,7 @@ var campgroundRoutes = require('./routes/campgrounds'),
     commentRoutes = require('./routes/comments'),
     indexRoutes = require('./routes/index');
 
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test_2');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
