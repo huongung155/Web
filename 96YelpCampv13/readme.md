@@ -263,7 +263,7 @@
 `git add -A`  
 `git commit -m'test'`  
 * Create heroku: `heroku create`  
-	* `heroku apps:rename quan1609`: to easily access heroku in [quan1609.herokuapp.com](quan1609.herokuapp.com)
+	* `heroku apps:rename quan1609`: to easily access heroku in [quan1609.herokuapp.com](https://quan1609.herokuapp.com)
 	* `git remote -v`: to check heroku is also created, it creates the remote to push on heroku git
 		* > heroku  https://git.heroku.com/name..  (fetch)
 		* > heroku  https://git.heroku.com/name..  (push)
