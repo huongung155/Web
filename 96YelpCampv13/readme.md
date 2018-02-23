@@ -210,6 +210,9 @@
 
 # Image Upload
 * Use multer to handle multipart/form-data in form upload and cloudinary to upload image, then this service will return the image link
+* Add npm **cloudinary** where you upload image and **multer** which is the way to upload image in `routes/campgrounds.js`
+* Declare `storage`, `imageFilter` and `upload` in `routes/campgrounds.js`
+![alt text](https://g7z7iw.ch.files.1drv.com/y4mHqywZNR6hbYbwpwUlZp57i0OvsUdAfkJam2yGhVdyVWmesL2s6lGS9yqrEytirO1xhMj9iXQz8EzIZQlhWPj8wIQOnAun5JAM-0uFQV8bpqvGJ4sMYsxlHpETONGeJ9CVdKWNOFJYS9ImY5qvqrPghUxdhHLJ9kiqhNn1yFKkF4hmvEpXXEK8Py49NTdOcKxheED0TGuuLFmeP_fEPOeig/Capture07.PNG?psid=1)
 
 # 4 Types of directory link
 * ../abc/xyz is to come to root directory of abc
@@ -220,7 +223,7 @@
 * In header.ejs, change link of bootstrap to v4
 	* Change the navbar
   		1. `<nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">`
-  			* mb: margin bottom to 4
+  			* `mb`: margin bottom to 4
   		2. button collapse with just one `span`
   		3. `<ul class="navbar-nav mr-auto">`: nav left
   		4. `<ul class="navbar-nav navbar-right">`: nav right
