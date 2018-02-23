@@ -212,7 +212,12 @@
 * Use multer to handle multipart/form-data in form upload and cloudinary to upload image, then this service will return the image link
 * Add npm **cloudinary** where you upload image and **multer** which is the way to upload image in `routes/campgrounds.js`
 * Declare `storage`, `imageFilter` and `upload` in `routes/campgrounds.js`
-![alt text](https://g7z7iw.ch.files.1drv.com/y4mHqywZNR6hbYbwpwUlZp57i0OvsUdAfkJam2yGhVdyVWmesL2s6lGS9yqrEytirO1xhMj9iXQz8EzIZQlhWPj8wIQOnAun5JAM-0uFQV8bpqvGJ4sMYsxlHpETONGeJ9CVdKWNOFJYS9ImY5qvqrPghUxdhHLJ9kiqhNn1yFKkF4hmvEpXXEK8Py49NTdOcKxheED0TGuuLFmeP_fEPOeig/Capture07.PNG?psid=1)
+* Config your account **cloudinary**
+![alt text](https://g7z7iw.ch.files.1drv.com/y4mB7ro1NyW-P01RtsfEU2qqe166iZP92Xl2Fx9dSOJN9ggv7b0_hWa9p0vpF08aN8UquEdX7Q9bK0g0rkOuHCDquGYNTZF-R42GxCmGku0cJocqO6V42oI1ZaTtsVpJpFKLn_ngH2XeUK5VW0qwDvIoPS-xnluhv2KDzImhLumm5O8L1SYJCvJwjXIoPgl-tVAgbnanBkhtEpz_5JiQQ5f6w/Capture07.PNG?psid=1)
+* Declare `enctype="multipart/form-data"` and `input type="file"` in `views/campgrounds/new.ejs`
+![alt text](https://g7z03a.ch.files.1drv.com/y4mmGC2nXEZfvhJESTCICEAhXqmuoKNmphKPsRoorG5Ockf4mdi1N9YtL4pQIe8Ge5AtwQWzhx40FhyWxt6-oFmWZuB3ySyvVD2F17FlYudTEW-K4rZmKjssItYDm7HaB64kTMqmfWkScmC0m0Kp4Co_WtXg-J7TLUnNlNP7HMLiak9fRXk7NXFmHKYn8vtyWQ_cZzy9w1FSpia9lXiczc1Xg/Capture08.PNG?psid=1)
+* `cloudinary.uploader.upload(req.file.path, function (result)` will upload image on **cloudinary** and `result.secure_url` is the image link on **cloudinary**
+![alt text](https://g7wqxg.ch.files.1drv.com/y4mVPBFfBtuWu-gi2HL9oQKXNhyj2v6JAnQGyKYfnET6RECZzslIKxTkWs8lyDG4gxQMhPIpSY_bTohO5A62x8-9LkZ9yfJUiVeTRLZ4HuVJy4-SYZ_R9fMxGEqW6Ti3avJiwkebVBzhpfKssZr3snIKMHKmhPqtWP8tjqgOA7SBQOtkyvOytRDy7WfpjUl0zMjJ9NwzmsGkGK-_d5GUa420A/Capture09.PNG?psid=1)
 
 # 4 Types of directory link
 * ../abc/xyz is to come to root directory of abc
