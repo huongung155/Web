@@ -211,6 +211,11 @@
 # Image Upload
 * Use multer to handle multipart/form-data in form upload and cloudinary to upload image, then this service will return the image link
 
+# 4 Types of directory link
+* ../abc/xyz is to come to root directory of abc
+* ./abc/xyz = abc/xyz is to come to abc
+* /abc/xyz : example app.use(express.static('./public')), so it is to come to public/abc/xyz
+
 # Migrate to Bootstrap v4
 * In header.ejs, change link of bootstrap to v4
 	* Change the navbar
@@ -253,6 +258,13 @@
 ![alt text](https://9tuofg.ch.files.1drv.com/y4mESw9kYcjGAsRBLUe--orJ0Y4n4bUowwjuYz9lEwfFaCrS0_6Gv-LJuOzvrnSL2J2xvPONXOkU3UjRAhu8VEFgNCoAtSzlCCKf8cU5uZDJntqu2qhCfYTjFhb7YoZkgwVq22LPjOcTKOD1GFjUWKxqjX4spGozciemqmud3yG11guluZyCC1W2-w2B3L_v0wbsln8DH3_68-QGt3oHEfaAA/Capture01.PNG?psid=1)
 * `Edit Comment` is based on `Add Comments` mechanism
 
+# Captcha (in `routes/contact.js` and `routes/index.js`)
+* Save key in `.env` file
+* Get captcha response by `req.body['g-recaptcha-response']`
+* Verify this URL to check Captcha succeed
+![alt text](https://g7zfog.ch.files.1drv.com/y4mfWsW5BJWU9C7Uz90tIHpgoV9b1Xxld2FZIzcriOd15HN5f9JSydrKGRtqe1MT_IIWeVB7YB_w7DwCo-AXHk8oK6wpHHTkBStFU5aa7LKHmBSPD1xuRs7sptD3TtFW12ZreFFPIfgej6wOwB1U3Mx18GVm9fLHyQXIx5YTMiWvhcAO5YTmYVV3w0VpOeqUAXxs6LXSyC-uo9rwH7AWL6Jcg/Capture05.PNG?psid=1)
+* `${secretKey}`, `${captcha}` is to write `var` variable in **raw text** on `JS` files
+
 # Deploy on Heroku/mlab
 `heroku login`  
 > Enter your Heroku credentials  
@@ -268,7 +280,7 @@
 		* > heroku  https://git.heroku.com/name..  (fetch)
 		* > heroku  https://git.heroku.com/name..  (push)
 * After creating heroku git, add and commit all changes, `git push heroku master`	
-	* Based on the package.json, heroku will npm install these package, so don't need to `push` _node_modules_
+	* Based on the package.json, heroku will `npm install` these package, so don't need to `push` _node_modules_
 * When some error occurs, heroku just show `Application error`, if you want to specify error, `heroku logs`
 * Make sure the `scripts/starts: "node app.js"` in package.json where the heroku follows to run app
 * Can run cmd on heroku directory `heroku run ls` or `heroku run npm i -S mongoose`
