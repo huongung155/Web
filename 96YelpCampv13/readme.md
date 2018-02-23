@@ -264,6 +264,8 @@
 * Verify this URL to check Captcha succeed
 ![alt text](https://g7zfog.ch.files.1drv.com/y4mfWsW5BJWU9C7Uz90tIHpgoV9b1Xxld2FZIzcriOd15HN5f9JSydrKGRtqe1MT_IIWeVB7YB_w7DwCo-AXHk8oK6wpHHTkBStFU5aa7LKHmBSPD1xuRs7sptD3TtFW12ZreFFPIfgej6wOwB1U3Mx18GVm9fLHyQXIx5YTMiWvhcAO5YTmYVV3w0VpOeqUAXxs6LXSyC-uo9rwH7AWL6Jcg/Capture05.PNG?psid=1)
 * `${secretKey}`, `${captcha}` is to write `var` variable in **raw text** on `JS` files
+* Moreover, when captcha succeeds, you can send mail to admin in `routes/contact.js` like the way mail sent in **Password Reset**
+![alt text](https://g7ywma.ch.files.1drv.com/y4mLOrAqCKX-gjsP6EYaHHRLlgnadyNL0KoCxfjIKil0_NlhTUj1-k7-ndFhsqC3ufOetFRKMgEz6CbHqPLqYLNAizvcmZ9qdk8V4Gi-erzrT8fWFFpAw_gSvSmJVcxxYdSL8ITB6fxoaWdPiVZxmf7jdxzXFO_gVIcQ3vR63K6sx2d-yYrGK8fDpXrMeLVAmwAm5axgOhv9cGDaSiObwWeNA/Capture06.PNG?psid=1)
 
 # Deploy on Heroku/mlab
 `heroku login`  
