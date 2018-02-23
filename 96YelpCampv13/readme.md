@@ -201,8 +201,13 @@
 * Write user page in view/campgrounds/show
 
 # Password Reset
-* Use async to sequentially implement function, nodemailer to mail and crypto to make the token in /reset/:token
-
+* HTML and CSS `forgot`, then `POST` the `forgot` in which send email which contains `/reset/:token`
+	* `async.waterfall` is to do number of functions sequentially, in `[]` contains all these functions
+* ![alt text](https://vbq8ig.ch.files.1drv.com/y4m3Y35bdhnqspMSld1-l5TvalMwVRLo8dwuI8uT9OqWec2zqsDfv176dyPU5h6j4yGUUb5oPHIq0w0_Vn68esN331cSwlsogVYSnwOmVTKBmCaNAVetulAThejOSGOdS4KgeEXsFS5CQmIAJSoAMWTA7QfdTE2pi4l7GIJOM9IvsQ7hxoUFmzoatf-vhAYrOoT_KDVcsVPqH4PRN2uy8ismw/Capture13.PNG?psid=1)
+	* This function is to make **token**, `done(err, token)` is to pass parameters to next function
+* ![alt text](https://vbqnga.ch.files.1drv.com/y4mgKZNpLCN74G1PO7Yu_bEX5fobM50Ba3HKgpyjGjE2RM9omdaWj2zo22tNgDCpI0b2f1pGGUMMyGEkbAFSuvQD0hz9tpVnwTumZcl5HXAQUUDcoWvQzkqnBbIHLVKj_qcLweFfsZ8AhDLLvh3C6il6cshaM-HrqTAMXEDSRXSbto806Hot5sMDApC1mAW8FT0mBLzJsgEh_Juqh5N77RNeQ/Capture14.PNG?psid=1)
+	* Next function is to find the email that inputs, in which you set the `resetPasswordToken` and `resetPasswordExpires` to 1000h, pass `err, token, user` to next function
+* ![alt text](https://vbrycw.ch.files.1drv.com/y4m9oZnLrMMaOJdlk3lzPNEArIzwHyVmF5hlxv5I2mkNqwfbZmqz0SkmhHwIlcSuabH8mrw4ARzgZNgbVmEild8m_sWR8JE1xj-sf2VjaUULxGdyipqZ_cHKrWQ3FxBQhgs5UjPza9yZnKL-gKBssCI9oDlIejdsB-jQte7XyfawstoTmlv4HlcRSFXkMSiM2UeAiJaiAd6hkko7CuO7Cvo9Q/Capture15.PNG?psid=1)
 # Fuzzy Search
 * Add search bar on index page with GET method
 ![alt text](https://g7ypuq.ch.files.1drv.com/y4mEv0tOJJzzhRtaiduCKaOvch_EZkHhI713EE6RyPtPNd4E6gcvE41D--MwD9VK_opOkFNBJCCAK2SbwpdDA3_85hAULokw1rs0EbeCXZf1IgRmj9KW1fwfxjggxV7FhE82kGNZYVjq-sH62YuUiIW4pSuOooh3IqCxu78ZRPgY3gJmip-dLz4UwbdTg9_mOWFAlFRXR7gCE1oElguI-O9Cw/Capture10.PNG?psid=1)
