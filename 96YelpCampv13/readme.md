@@ -210,6 +210,7 @@
 ![alt text](https://g7yicg.ch.files.1drv.com/y4mDXJdJH2Yapo_i9-zUlhRNX9z9ZCduBZQTEJzjGfVTi7XoDAdncYVNDAg3NwU4YoEM8nflY6t2evIehd7AhBHnFx715mZSVnf4ivkcog61L36M7r_Fi0NSYjHw1wElE8uDjKscMcTXfsJwPRy_j8vVNCoP841u18QLeOIaiP1O3jUN4T31vKgZxgUs10l7zJx-bJgkOuGsJrvXj8O65ZNuA/Capture11.PNG?psid=1)
 	* The `.serialize()` method creates a text string in standard URL-encoded notation. It can act on a jQuery object that has selected individual form controls, such as `<input>`, `<textarea>`, `<select>`. Eg: **`single=Single&multiple=Multiple&multiple=Multiple3&check=check2&radio=radio1`**
 	* `$.get('/campgrounds?' + search, function(data) {` will call `router.get('/', function(req, res){` in `campgrounds.js` and the `res.status(200).json(allCampgrounds);` is the `data`  
+
 ![alt text](https://g7ztlq.ch.files.1drv.com/y4m7Cc0kGCPmKgKNqTzFDx3VqIKPdXZw9XnYigIkv8jdJUxUz5tAh0-OWLxMZ0ijOjBDUhIAVpJ-dwIHx4UUlCY1if7c3cOw-KrIScFGGhqYPLYvrZ-qGQvgOk0YO34x5ZlxNi3bFpo2VIh4lD3WU-MxZ5E_xdoINa4Rb1q4zO9o2EVzz_Pos4IjeFtDPd_6WEvFFGzWmdG-cleOR0cyJHW3A/Capture12.PNG?psid=1)
 
 # Image Upload
