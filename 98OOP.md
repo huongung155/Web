@@ -121,4 +121,4 @@ elle.isInstructor;
 	* See that `elle.__proto__` = `Person.prototype` and this is:
 * ![alt text](https://woyplg.ch.files.1drv.com/y4mry5hQp94JWGi6Y-YtOESmoknIL-eF4S6usqWPS9l3stHtGN4gYSMmm7KnefHcV5uR0b6H496IWz6hpBzJCveMDsPg2vNwhb36JlO3bImIUPjHVsG65ZX8a7BOIGTD99unRd-fPGRtcS9Fj_amjkiFcE2NaOefyY5hDMUFV4Tp0ndRBUK7WJy7ZuI-VK_KlpeBurmwuHlFRNkDj9kIqmvOw/Capture21.PNG?psid=1)
 	* Inside it, we also have `__proto__`
-* ![alt text]	(https://woyitw.ch.files.1drv.com/y4mTzMfL9ghMsznwq4mOR2poIzRcobgheHeKAH_PLzfjx_JDFYcxQhYuCrmxVtJ3N9yzAbqmXoOYYFtn_011v1f3GSzAimjOyllmgnbdIATc2LfTQYEjEG4vHHoxckQAVdHL77Gw1csOIMknnMYDUqcTp7oT6qZ9xKfhLCjqjgOHfePBCDTFre61fpDtjhxQvt-jDJA3DppSQUwgPu2ZNiaAA/Capture22.PNG?psid=1)
+* ![alt text](https://woyitw.ch.files.1drv.com/y4mTzMfL9ghMsznwq4mOR2poIzRcobgheHeKAH_PLzfjx_JDFYcxQhYuCrmxVtJ3N9yzAbqmXoOYYFtn_011v1f3GSzAimjOyllmgnbdIATc2LfTQYEjEG4vHHoxckQAVdHL77Gw1csOIMknnMYDUqcTp7oT6qZ9xKfhLCjqjgOHfePBCDTFre61fpDtjhxQvt-jDJA3DppSQUwgPu2ZNiaAA/Capture22.PNG?psid=1)
