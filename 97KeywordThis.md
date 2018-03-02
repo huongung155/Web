@@ -220,7 +220,7 @@ function Person(firstName. lastName){
 	this.lastName = lastName;
 }
 ```
-* it's bad practice when compard to above part because it declares glabally `firstName` and `lastName` in function
+* it's bad practice based on Global with `Strict` in ES5 because it declares globally `firstName` and `lastName` in function
 * But with `new`, it's whole differnet
 ```javascript
 var elle = new Person('Elle', 'Schoppik');
