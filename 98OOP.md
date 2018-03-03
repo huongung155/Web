@@ -32,7 +32,17 @@ var rusty = new Dog('Rusty', 3)
 rusty.bark()
 ```
 > Rusty just barked
-
+* Now `rusty` has object
+```javascript
+var rusty = {
+	name = 'Rusty',
+	age = 2,
+	bark: function(){
+		console.log(this.name + ' just barked')
+	}
+}
+```
+* And `this` is in `rusty`
 ## Abstract for Car and Motorcycle
 ```javascript
 function Car(make, model, year){
