@@ -58,3 +58,46 @@ li{
 	text-decoration: line-through;
 }
 ```
+
+# Advance Selectors
+```css
+/*Element*/
+li{
+
+}
+/*class*/
+.hello{
+
+}
+/*id*/
+#name{
+
+}
+ul#name{
+	
+}
+/*Star: Apply Style to every single element*/
+*{
+	border: 1px solid lightgrey;
+}
+
+/*Descendant Selector(nested tag): style anchor tag which inside li tag. Eg: li .hello: style class hello which inside li tag*/
+li a{
+	color: red;
+}
+
+/*Adjacent Selector: style ul tag which h4 is next to*/
+h4 + ul{
+	border: 4px solid red;
+}
+
+/*Attribute Selector: style anchor tag which has href=google.com. Eg: input[type="checkbox"]: style input which has this type*/
+a[href="http://www.google.com"]{
+	background: blue;
+}
+
+/*nth of type: style the even(second) ul in a group*/
+ul:nth-of-type(even){
+	background: purple;
+}
+```
