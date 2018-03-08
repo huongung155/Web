@@ -61,11 +61,11 @@
 	<option value='Sad'>:(</option>
 </select>
 ```
-###Textarea
+### Textarea
 ```html
 <textarea name='paragraph' rows=10 cols=10></textarea>
 ```
-##Exercise
+## Exercise
 ```html
 <form>
 	<label for="firstName">First Name:</label>
