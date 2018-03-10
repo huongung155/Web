@@ -135,7 +135,7 @@ router.put('/:id', upload.single('image'), function(req, res){
             var lng = data.results[0].geometry.location.lng;
             var location = data.results[0].formatted_address;
             var newData = {name: req.body.name, image: result.secure_url, description: req.body.description, price: req.body.price, location: location, latitude: lat, longitude: lng};
-                // var extract = foundCampground.image.match(/^https:\/\/res\.cloudinary\.com\/dqagyeboj\/image\/upload\/v1517711641\/(\w*\.\w*)/i);
+                // var extract = foundCampground.image.match(/^https:\/\/res\.cloudinary\.com\/image\/(\w*\.\w*)/i);
             Campground.findByIdAndUpdate(req.params.id, {$set: newData}, function(err, campground){
                 if(err){
                     req.flash('error', err.message);
